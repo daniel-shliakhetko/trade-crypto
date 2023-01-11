@@ -24,12 +24,14 @@ span,
 a,
 ul,
 li,
-button {
+button,
+input,
+label {
     margin: 0;
     padding: 0;
     color: $white;
 
-    .black {
+    &.black {
         color: $black;
     }
 }
@@ -43,11 +45,30 @@ img {
     }
 }
 
+button {
+    border: none;
+}
+
+hr {
+    width: 100%;
+    margin-top: 0.5rem;
+    border-bottom: 1px solid #fff;
+    box-shadow: 0 0 25px $white, 0 0 10px $white;
+}
+
 h1,
 h2 {
     text-shadow: 0 0 20px $glow, 0 0 30px $glow, 0 0 40px $glow, 0 0 55px $glow, 0 0 75px $glow;
     font-size: 6em;
     font-weight: 500;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
 }
 
 .wrapper {
@@ -72,4 +93,62 @@ h2 {
     margin: 0 auto;
     width:100%;
     max-width: 1200px;
+}
+
+.header {
+    padding-top: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+
+    .logo {
+        display: flex;
+        align-items: center;
+
+        &__title {
+            padding-left: 0.5rem;
+            font-weight: 800;
+        }
+    }
+
+    .menu {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        &__item {
+            font-weight: 600;
+
+            &.get-started {
+                font-weight: 800;
+
+                .menu__link {
+                    padding: 0.25rem;
+                    border-radius: 2rem;
+                    background-color: $white;
+                    color: $black !important;
+                }
+            }
+        }
+    }
+
+    .navigation {
+        display: flex;
+        align-items: center;
+
+        &__search {
+            background: none;
+            border: none;
+            outline: none;
+            color: $white;
+        }
+
+        &__submit {
+            border: none;
+            background-color: transparent;
+            background-image: url(../images/icons/search.png);
+            background-repeat: no-repeat;
+            height: 2em;
+            width: 2em;
+        }
+    }
 }
