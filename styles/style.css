@@ -1283,9 +1283,15 @@ button .black {
 img {
   max-width: 100%;
 }
+img.glow {
+  border: 2px solid #fff;
+  box-shadow: 0 0 5px #fff, 0 0 20px #6d4484, 0 0 30px #6d4484, 0 0 40px #6d4484;
+}
 
 h1,
 h2 {
+  text-shadow: 0 0 20px #6d4484, 0 0 30px #6d4484, 0 0 40px #6d4484, 0 0 55px #6d4484, 0 0 75px #6d4484;
+  font-size: 6em;
   font-weight: 500;
 }
 
