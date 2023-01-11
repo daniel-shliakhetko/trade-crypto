@@ -1,24 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700;800&display=swap');
 
-// Functions first
-@import "../node_modules/bootstrap/scss/functions";
-
-// Required Bootstrap imports
-@import "../node_modules/bootstrap/scss/variables";
-@import "../node_modules/bootstrap/scss/maps";
-@import "../node_modules/bootstrap/scss/mixins";
-@import "../node_modules/bootstrap/scss/root";
-
-// Optional components
-@import "../node_modules/bootstrap/scss/utilities";
-@import "../node_modules/bootstrap/scss/reboot";
-@import "../node_modules/bootstrap/scss/containers";
-@import "../node_modules/bootstrap/scss/grid";
-@import "../node_modules/bootstrap/scss/helpers";
-@import "../node_modules/bootstrap/scss/utilities/api";
+@import "./bootstrap.scss";
 
 $black: #000;
 $white: #fff;
+$glow:#6d4484;
 
 html,
 body {
@@ -48,8 +34,14 @@ button {
     }
 }
 
-h1,h2{
-    // text-shadow: 0 0 20px #6d4484, 0 0 30px #6d4484, 0 0 40px #6d4484, 0 0 55px #6d4484, 0 0 75px #6d4484;
+img{
+    // border:2px solid $white;
+    // box-shadow: 0 0 5px $white, 0 0 20px $glow, 0 0 30px $glow, 0 0 40px $glow;
+}
+
+h1,
+h2 {
+    // text-shadow: 0 0 20px $glow, 0 0 30px $glow, 0 0 40px $glow, 0 0 55px $glow, 0 0 75px $glow;
     // font-size:8em;
     font-weight: 500;
 }
@@ -63,4 +55,16 @@ h1,h2{
 .container {
     margin: 0 auto;
     max-width: 1440px;
+    display:flex;
+    flex-direction: column;
+}
+
+.row {
+    &>* {
+        padding-right: 0;
+        padding-left: 0;
+    }
+    margin: 0 auto;
+    width:100%;
+    max-width: 1200px;
 }
