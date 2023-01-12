@@ -1438,4 +1438,33 @@ a {
 .home-interesting-page__image {
   margin-bottom: 3rem;
   margin-right: 35%;
+}
+.description {
+  padding: 10rem 0;
+}
+.description-thumbnail {
+  display: flex;
+  flex-direction: column;
+}
+.description-thumbnail:first-of-type {
+  justify-content: flex-end;
+}
+.description-thumbnail:last-of-type {
+  justify-content: flex-start;
+}
+.description-information {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  text-align: center;
+}
+.description-information__moto {
+  text-transform: uppercase;
+  font-weight: 700;
+  padding-bottom: 2rem;
+}
+.description-information__title {
+  padding-bottom: 2rem;
 }/*# sourceMappingURL=style.css.map */

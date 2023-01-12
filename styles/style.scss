@@ -129,8 +129,7 @@ a {
         margin-bottom: 1rem;
     }
 
-    &__description {
-    }
+    &__description {}
 }
 
 .header {
@@ -218,9 +217,7 @@ a {
 
     &-thumbnail {
 
-        &__image {
-            
-        }
+        &__image {}
     }
 
     &-interesting-page {
@@ -230,7 +227,7 @@ a {
 
         &__image {
             margin-bottom: 3rem;
-            margin-right:35%;
+            margin-right: 35%;
         }
 
         .text-section {
@@ -239,5 +236,45 @@ a {
 
             .text-section__description {}
         }
+    }
+}
+
+.description {
+    padding: 10rem 0;
+
+    &-thumbnail {
+        display: flex;
+        flex-direction: column;
+
+        &:first-of-type {
+            justify-content: flex-end;
+        }
+
+        &:last-of-type {
+            justify-content: flex-start;
+        }
+
+        &__image {}
+    }
+
+    &-information {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+        text-align: center;
+
+        &__moto {
+            text-transform: uppercase;
+            font-weight: 700;
+            padding-bottom: 2rem;
+        }
+
+        &__title {
+            padding-bottom: 2rem;
+        }
+
+        &__description {}
     }
 }
