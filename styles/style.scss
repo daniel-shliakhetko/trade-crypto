@@ -13,6 +13,10 @@ body {
     font-family: 'Urbanist', sans-serif;
 }
 
+section {
+    padding: 5rem 0;
+}
+
 h1,
 h2,
 h3,
@@ -46,7 +50,28 @@ img {
 }
 
 button {
+    // padding:0.5rem;
+    width: 9rem;
+    height: 3rem;
+    font-size: 1em;
+    font-weight: 700;
+    font-family: 'Urbanist', sans-serif;
+    text-transform: uppercase;
     border: none;
+    border-radius: 2rem;
+    background-color: $white;
+    color: $black;
+
+    &.black {
+        background-color: $black;
+        color: $white;
+    }
+
+    &.transparent {
+        border: 2px solid $white;
+        background-color: transparent;
+        color: $white;
+    }
 }
 
 hr {
@@ -93,6 +118,19 @@ a {
     margin: 0 auto;
     width:100%;
     max-width: 1200px;
+}
+
+.text-section {
+
+    &__title {
+        display: block;
+        font-size: 1.2em;
+        font-weight: 700;
+        margin-bottom: 1rem;
+    }
+
+    &__description {
+    }
 }
 
 .header {
@@ -149,6 +187,57 @@ a {
             background-repeat: no-repeat;
             height: 2em;
             width: 2em;
+        }
+    }
+}
+
+.home {
+
+    &-main {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        &__moto {
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+
+        &__title {
+            padding-bottom: 3rem;
+        }
+
+        &__buttons {
+
+            .col-md-6 {
+
+                button {}
+            }
+        }
+    }
+
+    &-thumbnail {
+
+        &__image {
+            
+        }
+    }
+
+    &-interesting-page {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+
+        &__image {
+            margin-bottom: 3rem;
+            margin-right:35%;
+        }
+
+        .text-section {
+
+            .text-section__title {}
+
+            .text-section__description {}
         }
     }
 }
