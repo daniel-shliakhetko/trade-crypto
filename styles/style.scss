@@ -85,9 +85,17 @@ hr {
 
 h1,
 h2 {
-    text-shadow: 0 0 20px $glow, 0 0 30px $glow, 0 0 40px $glow, 0 0 55px $glow, 0 0 75px $glow;
     font-size: 6em;
+    line-height: 1em;
     font-weight: 500;
+
+    &:not(.black) {
+        text-shadow: 0 0 20px $glow, 0 0 30px $glow, 0 0 40px $glow, 0 0 55px $glow, 0 0 75px $glow;
+    }
+
+    .black {
+        color: $black;
+    }
 }
 
 ul {
@@ -292,8 +300,8 @@ a {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        padding-top:10%;
-        padding-bottom:10%;
+        padding-top: 10%;
+        padding-bottom: 10%;
     }
 
     .phone-calculator {
@@ -329,7 +337,7 @@ a {
                 flex-direction: column;
                 align-items: center;
 
-                &>*{
+                &>* {
                     margin-bottom: 1rem;
                 }
 
@@ -342,14 +350,14 @@ a {
 
                 &__from,
                 &__to {
-                    font-size:1.5rem;
-                    border:0.2rem solid $black;
+                    font-size: 1.5rem;
+                    border: 0.2rem solid $black;
                     border-radius: 3rem;
                 }
 
                 &__from-label,
                 &__to-label {
-                    width:100%;
+                    width: 100%;
                     text-align: left;
                     color: $black;
                     font-weight: 700;
@@ -388,9 +396,7 @@ a {
                 display: flex;
                 justify-content: space-between;
 
-                &__item {
-
-                }
+                &__item {}
 
                 &__link {
                     color: $black;
@@ -399,5 +405,65 @@ a {
                 }
             }
         }
+    }
+}
+
+.get-started {
+    padding:0;
+    background-color: $white;
+
+    &-information {
+    padding: 10rem 0;
+
+        &>* {
+            margin-top: 2rem;
+        }
+
+        &__subtitle {
+            font-weight: 700;
+            font-size: 1.2em;
+        }
+
+        &__title {}
+
+        &__description {}
+
+        &__button {}
+    }
+
+    &-thumbnail {
+
+        &__image {
+            width: 100%;
+            height: 80%;
+            border: 2px solid $black;
+        }
+
+        &__border {
+        padding-right:4px;
+            margin-left:25%;
+            width: fit-content;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            border: 1px solid $black;
+        }
+    }
+}
+
+.interesting-page {
+
+    &-thumbnail {
+
+        &__image {}
+    }
+
+    &-information {
+
+        &__title {}
+
+        &__description {}
+
+        &__button {}
     }
 }
