@@ -1707,7 +1707,27 @@ a {
 .comment {
   margin-bottom: 3rem;
 }
+.comment .comment__description {
+  margin-bottom: 0.75rem;
+}
 .comment .comment__commentator {
   font-weight: 700;
   font-size: 1.2em;
+}
+
+.footer {
+  padding: 6rem 0 3.5rem 0;
+}
+.footer-section__title {
+  display: block;
+  font-weight: 700;
+  font-size: 1.2em;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+.footer-section__item {
+  margin-bottom: 0.25rem;
+}
+.footer-copyright {
+  margin-top: 3rem;
 }/*# sourceMappingURL=style.css.map */

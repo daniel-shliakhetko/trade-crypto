@@ -572,10 +572,10 @@ a {
 }
 
 .comments {
-    padding:7.5rem 0;
+    padding: 7.5rem 0;
 
     &-title {
-        padding-bottom:5rem;
+        padding-bottom: 5rem;
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
@@ -584,12 +584,12 @@ a {
 
         &__subtitle {
             display: block;
-            margin-top:2rem;
+            margin-top: 2rem;
             font-weight: 700;
             font-size: 1.2em;
             text-transform: uppercase;
         }
-        
+
     }
 
     &-list {}
@@ -597,11 +597,43 @@ a {
 
 .comment {
 
-    .comment__description {}
+    .comment__description {
+        margin-bottom: 0.75rem;
+    }
 
     .comment__commentator {
         font-weight: 700;
         font-size: 1.2em;
     }
+
     margin-bottom: 3rem;
+}
+
+.footer {
+    padding: 6rem 0 3.5rem 0;
+
+    &-list {}
+
+    &-section {
+
+        &__title {
+            display: block;
+            font-weight: 700;
+            font-size: 1.2em;
+            text-transform: uppercase;
+            margin-bottom: 0.5rem;
+        }
+
+        &__list {}
+
+        &__item {
+            margin-bottom:0.25rem;
+        }
+
+        &__link {}
+    }
+
+    &-copyright {
+        margin-top: 3rem;
+    }
 }
