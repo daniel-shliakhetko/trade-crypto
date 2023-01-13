@@ -80,8 +80,15 @@ button {
 hr {
     width: 100%;
     margin-top: 0.5rem;
-    border-bottom: 1px solid #fff;
-    box-shadow: 0 0 25px $white, 0 0 10px $white;
+    border-bottom: 1px solid $white;
+
+    &.black {
+        border-bottom: 1px solid $black;
+    }
+
+    &:not(.black) {
+        box-shadow: 0 0 25px $white, 0 0 10px $white;
+    }
 }
 
 h1,
@@ -522,5 +529,44 @@ a {
         justify-content: space-between;
         font-weight: 700;
         font-size: 1.2em;
+    }
+}
+
+.benefits {
+    padding: 7.5rem 0;
+    background-color: $white;
+
+    .benefits-title {
+        text-align: center;
+
+        .benefits-title__subtitle {
+            text-transform: uppercase;
+        }
+
+        .benefits-title__title {
+            margin-bottom: 5rem;
+        }
+    }
+
+    .benefits-list {
+        margin-top: 1rem;
+
+        .benefits-list__item {
+
+            .text-section {
+                padding: 2rem;
+
+                .text-section__title {
+                    text-transform: uppercase;
+                    color: $black;
+
+                }
+
+                .text-section__description {
+                    color: $black;
+
+                }
+            }
+        }
     }
 }
