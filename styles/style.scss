@@ -487,3 +487,40 @@ a {
         &__button {}
     }
 }
+
+.pages {
+    &__title {
+        text-align: center;
+    }
+
+    &__list {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__item {
+        display: flex;
+
+        &:nth-of-type(2n) {
+            justify-content: flex-end;
+        }
+    }
+}
+
+.page-card {
+    display: flex;
+    flex-direction: column;
+    margin: 3rem;
+    width: 70%;
+
+    &__image {
+        margin-bottom: 1rem;
+    }
+
+    &__link {
+        display: flex;
+        justify-content: space-between;
+        font-weight: 700;
+        font-size: 1.2em;
+    }
+}

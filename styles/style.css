@@ -1625,4 +1625,33 @@ a {
 }
 .interesting-page-information > * {
   margin-bottom: 2rem;
+}
+.pages__title {
+  text-align: center;
+}
+.pages__list {
+  display: flex;
+  justify-content: space-between;
+}
+.pages__item {
+  display: flex;
+}
+.pages__item:nth-of-type(2n) {
+  justify-content: flex-end;
+}
+
+.page-card {
+  display: flex;
+  flex-direction: column;
+  margin: 3rem;
+  width: 70%;
+}
+.page-card__image {
+  margin-bottom: 1rem;
+}
+.page-card__link {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 700;
+  font-size: 1.2em;
 }/*# sourceMappingURL=style.css.map */
