@@ -13,6 +13,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Urbanist', sans-serif;
+    font-size: 0.95em;
 }
 
 section {
@@ -123,6 +124,11 @@ a {
     &>* {
         padding-right: 0;
         padding-left: 0;
+    }
+
+    &.row-right {
+        margin-left: 0;
+        margin-right: auto;
     }
 
     margin: 0 auto;
@@ -350,6 +356,7 @@ a {
 
                 &__from,
                 &__to {
+                    max-width: 100%;
                     font-size: 1.5rem;
                     border: 0.2rem solid $black;
                     border-radius: 3rem;
@@ -409,11 +416,11 @@ a {
 }
 
 .get-started {
-    padding:0;
+    padding: 0;
     background-color: $white;
 
     &-information {
-    padding: 10rem 0;
+        padding: 10rem 0;
 
         &>* {
             margin-top: 2rem;
@@ -440,8 +447,8 @@ a {
         }
 
         &__border {
-        padding-right:4px;
-            margin-left:25%;
+            padding-right: 4px;
+            margin-left: 25%;
             width: fit-content;
             height: 100%;
             display: flex;
@@ -452,13 +459,26 @@ a {
 }
 
 .interesting-page {
+    padding: 0;
 
     &-thumbnail {
+        display: flex;
+        align-items: center;
+        padding-top: 8px;
 
-        &__image {}
+        &__image {
+            width: auto;
+            height: 100%;
+        }
     }
 
     &-information {
+        padding: 10rem 0;
+        text-align: center;
+
+        &>* {
+            margin-bottom: 2rem;
+        }
 
         &__title {}
 
