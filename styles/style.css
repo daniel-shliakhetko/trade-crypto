@@ -1665,25 +1665,49 @@ a {
   padding: 7.5rem 0;
   background-color: #fff;
 }
-.benefits .benefits-title {
+.benefits-title {
   text-align: center;
 }
-.benefits .benefits-title .benefits-title__subtitle {
+.benefits-title__subtitle {
   text-transform: uppercase;
 }
-.benefits .benefits-title .benefits-title__title {
+.benefits-title__title {
   margin-bottom: 5rem;
 }
-.benefits .benefits-list {
+.benefits-list {
   margin-top: 1rem;
 }
-.benefits .benefits-list .benefits-list__item .text-section {
+.benefits-list__item .text-section {
   padding: 2rem;
 }
-.benefits .benefits-list .benefits-list__item .text-section .text-section__title {
+.benefits-list__item .text-section .text-section__title {
   text-transform: uppercase;
   color: #000;
 }
-.benefits .benefits-list .benefits-list__item .text-section .text-section__description {
+.benefits-list__item .text-section .text-section__description {
   color: #000;
+}
+
+.comments {
+  padding: 7.5rem 0;
+}
+.comments-title {
+  padding-bottom: 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.comments-title__subtitle {
+  display: block;
+  margin-top: 2rem;
+  font-weight: 700;
+  font-size: 1.2em;
+  text-transform: uppercase;
+}
+.comment {
+  margin-bottom: 3rem;
+}
+.comment .comment__commentator {
+  font-weight: 700;
+  font-size: 1.2em;
 }/*# sourceMappingURL=style.css.map */
