@@ -14,10 +14,52 @@ body {
     padding: 0;
     font-family: 'Urbanist', sans-serif;
     font-size: 0.95em;
+    overflow-x: hidden;
 }
 
 section {
     padding: 5rem 0;
+}
+
+@media (max-width:768px) {
+
+    h1,
+    h2,
+    p,
+    span,
+    button {
+        margin-left: 1rem !important;
+        margin-right: 1rem !important;
+    }
+
+    button {
+        margin-bottom: 1rem !important;
+    }
+
+    .max-image {
+        max-width: 100%;
+        margin-left: -2px;
+    }
+
+    section,footer {
+        padding: 2.5rem 0!important;
+    }
+}
+
+@media (max-width:992px) {
+
+    h1,
+    h2,
+    p,
+    span,
+    button {
+        margin-left: 1rem !important;
+        margin-right: 1rem !important;
+    }
+
+    button {
+        margin-bottom: 1rem !important;
+    }
 }
 
 h1,
@@ -110,15 +152,15 @@ h2 {
 
     h1,
     h2 {
-        font-size: 5em!important;
+        font-size: 5em !important;
     }
 }
 
-@media (max-width:768px) {
+@media (max-width:767px) {
 
     h1,
     h2 {
-        font-size: 4em;
+        font-size: 3.75em !important;
     }
 }
 
@@ -132,12 +174,13 @@ a {
 
 .wrapper {
     min-height: 100vh;
-    width: 100%;
+    width: 100vw;
     background-color: $black;
 }
 
 .container {
     margin: 0 auto;
+    width: 100vw;
     max-width: 1440px;
     display: flex;
     flex-direction: column;
@@ -165,6 +208,7 @@ a {
         display: block;
         font-size: 1.2em;
         font-weight: 700;
+        margin-top: 1rem;
         margin-bottom: 1rem;
     }
 
@@ -196,7 +240,7 @@ a {
             font-weight: 600;
             padding-bottom: 0.25rem;
 
-            &:not(.get-started){
+            &:not(.get-started) {
                 padding-left: 6px;
             }
 
@@ -262,7 +306,10 @@ a {
 
     &-thumbnail {
 
-        &__image {}
+        &__image {
+            margin-bottom: 2rem;
+            float: right;
+        }
     }
 
     &-interesting-page {
@@ -273,6 +320,11 @@ a {
         &__image {
             margin-bottom: 3rem;
             margin-right: 35%;
+        }
+
+        &>* {
+            margin-left: 2rem;
+            padding-left: 0 !important;
         }
 
         .text-section {
@@ -290,6 +342,7 @@ a {
     &-thumbnail {
         display: flex;
         flex-direction: column;
+        align-items: center;
 
         &:first-of-type {
             justify-content: flex-end;
@@ -299,7 +352,9 @@ a {
             justify-content: flex-start;
         }
 
-        &__image {}
+        &__image {
+            width: 95%;
+        }
     }
 
     &-information {
@@ -634,15 +689,19 @@ a {
 .footer {
     padding: 6rem 0 3.5rem 0;
 
-    &-list {}
+    &-list {
+        padding-left: 1rem;
+    }
 
     &-section {
+        padding-bottom: 2rem;
 
         &__title {
             display: block;
             font-weight: 700;
             font-size: 1.2em;
             text-transform: uppercase;
+            margin-left: 0!important;
             margin-bottom: 0.5rem;
         }
 
