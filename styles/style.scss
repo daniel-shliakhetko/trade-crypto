@@ -136,6 +136,19 @@ hr {
 
     &:not(.black) {
         box-shadow: 0 0 25px $white, 0 0 10px $white;
+        animation: 3s linear infinite flicker;
+    }
+}
+
+@keyframes flicker {
+    0%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 0.5;
+    }
+    100%{
+        opacity: 1;
     }
 }
 
@@ -742,11 +755,57 @@ $shadow-blue: rgba(43, 24, 147, 0.95);
     border-radius: 50%;
     opacity: 0.6;
     background-color: $shadow;
-    box-shadow: inset 0 0 20px $glow, inset 0 0 30px $glow, inset 0 0 40px $glow, inset 0 0 50px $glow, inset 0 0 20rem $glow, 0 0 5px $glow, 0 0 10px $glow, 0 0 20px $glow, 0 0 30px $glow, 0 0 40px $glow, 0 0 50px $glow, 0 0 75px $glow, 0 0 100px $glow, 0 0 150px $glow, 0 0 200px $glow, 0 0 200px $glow, 0 0 300px $glow, 0 0 300px $glow, 0 0 400px $glow, 0 0 500px $glow, 0 0 600px $glow,0 0 700px $glow,0 0 800px $glow,0 0 900px $glow, 0 0 1000px $glow !important;
+    box-shadow: inset 0 0 20px $glow, inset 0 0 30px $glow, inset 0 0 40px $glow, inset 0 0 50px $glow, inset 0 0 20rem $glow, 0 0 5px $glow, 0 0 10px $glow, 0 0 20px $glow, 0 0 30px $glow, 0 0 40px $glow, 0 0 50px $glow, 0 0 75px $glow, 0 0 100px $glow, 0 0 150px $glow, 0 0 200px $glow, 0 0 200px $glow, 0 0 300px $glow, 0 0 300px $glow, 0 0 400px $glow, 0 0 500px $glow, 0 0 600px $glow, 0 0 700px $glow, 0 0 800px $glow, 0 0 900px $glow, 0 0 1000px $glow !important;
     z-index: -1;
 
     &.blue {
         background-color: $shadow-blue;
-        box-shadow: inset 0 0 20px $glow-blue, inset 0 0 30px $glow-blue, inset 0 0 40px $glow-blue, inset 0 0 50px $glow-blue, inset 0 0 20rem $glow-blue,0 0 5px $glow-blue, 0 0 10px $glow-blue, 0 0 20px $glow-blue, 0 0 30px $glow-blue, 0 0 40px $glow-blue, 0 0 50px $glow-blue, 0 0 75px $glow-blue, 0 0 100px $glow-blue, 0 0 150px $glow-blue, 0 0 200px $glow-blue, 0 0 200px $glow-blue, 0 0 300px $glow-blue, 0 0 300px $glow-blue, 0 0 400px $glow-blue, 0 0 500px $glow-blue, 0 0 600px $glow-blue,0 0 700px $glow-blue,0 0 800px $glow-blue,0 0 900px $glow-blue, 0 0 1000px $glow-blue, 0 0 1200px $glow-blue, 0 0 1400px $glow-blue, 0 0 1500px $glow-blue !important;
+        box-shadow: inset 0 0 20px $glow-blue, inset 0 0 30px $glow-blue, inset 0 0 40px $glow-blue, inset 0 0 50px $glow-blue, inset 0 0 20rem $glow-blue, 0 0 5px $glow-blue, 0 0 10px $glow-blue, 0 0 20px $glow-blue, 0 0 30px $glow-blue, 0 0 40px $glow-blue, 0 0 50px $glow-blue, 0 0 75px $glow-blue, 0 0 100px $glow-blue, 0 0 150px $glow-blue, 0 0 200px $glow-blue, 0 0 200px $glow-blue, 0 0 300px $glow-blue, 0 0 300px $glow-blue, 0 0 400px $glow-blue, 0 0 500px $glow-blue, 0 0 600px $glow-blue, 0 0 700px $glow-blue, 0 0 800px $glow-blue, 0 0 900px $glow-blue, 0 0 1000px $glow-blue, 0 0 1200px $glow-blue, 0 0 1400px $glow-blue, 0 0 1500px $glow-blue !important;
+    }
+}
+
+.thing {
+    position: absolute;
+}
+
+.diamond {
+    transition: 1s;
+    animation: 2s linear alternate diamond-show, 3s linear infinite flicker;
+}
+
+.tick{
+    transition: 1s;
+    animation: 2s linear alternate tick-show, 3s linear infinite flicker;
+}
+
+@keyframes diamond-show {
+    0% {
+        transform: translate(-100vw) rotate(0deg) scale(0.25);
+    }
+
+    50% {
+        transform: translate(0) rotate(360deg) scale(0.5);
+    }
+
+    100% {
+        transform: translate(0) rotate(720deg) scale(1);
+    }
+}
+
+@keyframes tick-show {
+    0% {
+        transform: translateY(-100vh);
+    }
+
+    80% {
+        transform: translateY(2rem);
+    }
+
+    90% {
+        transform: translateY(-1rem);
+    }
+
+    100% {
+        transform: translateY(0);
     }
 }

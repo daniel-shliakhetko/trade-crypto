@@ -6003,8 +6003,33 @@ hr.black {
 }
 hr:not(.black) {
   box-shadow: 0 0 25px #fff, 0 0 10px #fff;
+  -webkit-animation: 3s linear infinite flicker;
+          animation: 3s linear infinite flicker;
 }
 
+@-webkit-keyframes flicker {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes flicker {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 h1,
 h2 {
   font-size: 6em;
@@ -6464,4 +6489,72 @@ a {
 .shadow.blue {
   background-color: rgba(43, 24, 147, 0.95);
   box-shadow: inset 0 0 20px #2b1893, inset 0 0 30px #2b1893, inset 0 0 40px #2b1893, inset 0 0 50px #2b1893, inset 0 0 20rem #2b1893, 0 0 5px #2b1893, 0 0 10px #2b1893, 0 0 20px #2b1893, 0 0 30px #2b1893, 0 0 40px #2b1893, 0 0 50px #2b1893, 0 0 75px #2b1893, 0 0 100px #2b1893, 0 0 150px #2b1893, 0 0 200px #2b1893, 0 0 200px #2b1893, 0 0 300px #2b1893, 0 0 300px #2b1893, 0 0 400px #2b1893, 0 0 500px #2b1893, 0 0 600px #2b1893, 0 0 700px #2b1893, 0 0 800px #2b1893, 0 0 900px #2b1893, 0 0 1000px #2b1893, 0 0 1200px #2b1893, 0 0 1400px #2b1893, 0 0 1500px #2b1893 !important;
+}
+
+.thing {
+  position: absolute;
+}
+
+.diamond {
+  transition: 1s;
+  -webkit-animation: 2s linear alternate diamond-show, 3s linear infinite flicker;
+          animation: 2s linear alternate diamond-show, 3s linear infinite flicker;
+}
+
+.tick {
+  transition: 1s;
+  -webkit-animation: 2s linear alternate tick-show, 3s linear infinite flicker;
+          animation: 2s linear alternate tick-show, 3s linear infinite flicker;
+}
+
+@-webkit-keyframes diamond-show {
+  0% {
+    transform: translate(-100vw) rotate(0deg) scale(0.25);
+  }
+  50% {
+    transform: translate(0) rotate(360deg) scale(0.5);
+  }
+  100% {
+    transform: translate(0) rotate(720deg) scale(1);
+  }
+}
+
+@keyframes diamond-show {
+  0% {
+    transform: translate(-100vw) rotate(0deg) scale(0.25);
+  }
+  50% {
+    transform: translate(0) rotate(360deg) scale(0.5);
+  }
+  100% {
+    transform: translate(0) rotate(720deg) scale(1);
+  }
+}
+@-webkit-keyframes tick-show {
+  0% {
+    transform: translateY(-100vh);
+  }
+  80% {
+    transform: translateY(2rem);
+  }
+  90% {
+    transform: translateY(-1rem);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes tick-show {
+  0% {
+    transform: translateY(-100vh);
+  }
+  80% {
+    transform: translateY(2rem);
+  }
+  90% {
+    transform: translateY(-1rem);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }/*# sourceMappingURL=style.css.map */
