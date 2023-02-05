@@ -5965,6 +5965,8 @@ label.black {
 
 img {
   max-width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 img.glow {
   border: 2px solid #fff;
@@ -6080,9 +6082,10 @@ a {
 }
 
 .row {
-  margin: 0 auto;
-  width: 100%;
-  max-width: 1200px;
+  margin: 1rem auto;
+  width: calc(100% - 2rem);
+  max-width: calc(1200px - 2rem);
+  padding: 0 1rem;
 }
 .row > * {
   padding-right: 0;
@@ -6485,12 +6488,31 @@ a {
   background-color: rgba(109, 68, 132, 0.95);
   box-shadow: inset 0 0 20px #6d4484, inset 0 0 30px #6d4484, inset 0 0 40px #6d4484, inset 0 0 50px #6d4484, inset 0 0 20rem #6d4484, 0 0 5px #6d4484, 0 0 10px #6d4484, 0 0 20px #6d4484, 0 0 30px #6d4484, 0 0 40px #6d4484, 0 0 50px #6d4484, 0 0 75px #6d4484, 0 0 100px #6d4484, 0 0 150px #6d4484, 0 0 200px #6d4484, 0 0 200px #6d4484, 0 0 300px #6d4484, 0 0 300px #6d4484, 0 0 400px #6d4484, 0 0 500px #6d4484, 0 0 600px #6d4484, 0 0 700px #6d4484, 0 0 800px #6d4484, 0 0 900px #6d4484, 0 0 1000px #6d4484 !important;
   z-index: -1;
+  -webkit-animation: 3s linear alternate shadow-show, 10s linear infinite flicker;
+          animation: 3s linear alternate shadow-show, 10s linear infinite flicker;
 }
 .shadow.blue {
   background-color: rgba(43, 24, 147, 0.95);
   box-shadow: inset 0 0 20px #2b1893, inset 0 0 30px #2b1893, inset 0 0 40px #2b1893, inset 0 0 50px #2b1893, inset 0 0 20rem #2b1893, 0 0 5px #2b1893, 0 0 10px #2b1893, 0 0 20px #2b1893, 0 0 30px #2b1893, 0 0 40px #2b1893, 0 0 50px #2b1893, 0 0 75px #2b1893, 0 0 100px #2b1893, 0 0 150px #2b1893, 0 0 200px #2b1893, 0 0 200px #2b1893, 0 0 300px #2b1893, 0 0 300px #2b1893, 0 0 400px #2b1893, 0 0 500px #2b1893, 0 0 600px #2b1893, 0 0 700px #2b1893, 0 0 800px #2b1893, 0 0 900px #2b1893, 0 0 1000px #2b1893, 0 0 1200px #2b1893, 0 0 1400px #2b1893, 0 0 1500px #2b1893 !important;
 }
 
+@-webkit-keyframes shadow-show {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes shadow-show {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .thing {
   position: absolute;
 }
@@ -6503,8 +6525,6 @@ a {
 
 .tick {
   transition: 1s;
-  -webkit-animation: 2s linear alternate tick-show, 3s linear infinite flicker;
-          animation: 2s linear alternate tick-show, 3s linear infinite flicker;
 }
 
 @-webkit-keyframes diamond-show {
