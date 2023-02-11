@@ -790,7 +790,7 @@ $shadow-blue: rgba(43, 24, 147, 0.95);
 
 .tick {
     transition: 1s;
-    // animation: 2s linear alternate tick-show, 3s linear infinite flicker;
+    animation: 2s linear alternate tick-show, 3s linear infinite flicker;
 }
 
 @keyframes diamond-show {
@@ -810,10 +810,12 @@ $shadow-blue: rgba(43, 24, 147, 0.95);
 @keyframes tick-show {
     0% {
         transform: translateY(-100vh);
+        opacity:0;
     }
 
     80% {
         transform: translateY(2rem);
+        opacity:1;
     }
 
     90% {
