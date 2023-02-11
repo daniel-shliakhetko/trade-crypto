@@ -113,16 +113,33 @@ button {
     border-radius: 2rem;
     background-color: $white;
     color: $black;
+    transition: 0.5s;
+    cursor: pointer;
+
+    &:hover {
+        background-color: #999;
+        color: $black;
+    }
 
     &.black {
         background-color: $black;
         color: $white;
+
+        &:hover {
+            background-color: #999;
+            color: $black;
+        }
     }
 
     &.transparent {
         border: 2px solid $white;
         background-color: transparent;
         color: $white;
+
+        &:hover {
+            background-color: $white;
+            color: $black;
+        }
     }
 }
 
@@ -191,7 +208,15 @@ ul {
 }
 
 a {
+    display: inline-block;
     text-decoration: none;
+    transition:0.25s;
+
+    &:hover {
+        opacity:0.9;
+        transform: scale(0.95);
+    }
+
 }
 
 .wrapper {
@@ -502,6 +527,14 @@ a {
                     border-radius: 2rem;
                     background-color: $black;
                     color: $white;
+                    transition: 0.5s;
+                    cursor: pointer;
+
+                    &:hover {
+                        background-color: #ccc;
+                        color: $black;
+                    }
+
 
                 }
             }
@@ -810,12 +843,12 @@ $shadow-blue: rgba(43, 24, 147, 0.95);
 @keyframes tick-show {
     0% {
         transform: translateY(-100vh);
-        opacity:0;
+        opacity: 0;
     }
 
     80% {
         transform: translateY(2rem);
-        opacity:1;
+        opacity: 1;
     }
 
     90% {

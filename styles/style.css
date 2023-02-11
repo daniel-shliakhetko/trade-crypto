@@ -5981,15 +5981,29 @@ button {
   border-radius: 2rem;
   background-color: #fff;
   color: #000;
+  transition: 0.5s;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #999;
+  color: #000;
 }
 button.black {
   background-color: #000;
   color: #fff;
 }
+button.black:hover {
+  background-color: #999;
+  color: #000;
+}
 button.transparent {
   border: 2px solid #fff;
   background-color: transparent;
   color: #fff;
+}
+button.transparent:hover {
+  background-color: #fff;
+  color: #000;
 }
 
 hr {
@@ -6048,7 +6062,13 @@ ul {
 }
 
 a {
+  display: inline-block;
   text-decoration: none;
+  transition: 0.25s;
+}
+a:hover {
+  opacity: 0.9;
+  transform: scale(0.95);
 }
 
 .wrapper {
@@ -6287,6 +6307,12 @@ a {
   border-radius: 2rem;
   background-color: #000;
   color: #fff;
+  transition: 0.5s;
+  cursor: pointer;
+}
+.features .phone-calculator .phone .calculator__trade:hover {
+  background-color: #ccc;
+  color: #000;
 }
 .features .phone-calculator .phone-links {
   display: flex;
